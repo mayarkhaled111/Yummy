@@ -1,0 +1,220 @@
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: black;
+}
+
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  color: #fff;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 
+    2em -2em 0 0em, 3em 0 0 -1em, 
+    2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+    3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 
+    2em -2em 0 0, 3em 0 0 0.2em, 
+    2em 2em 0 0, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+     -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+     -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+     -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+    3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+    3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+  
+aside{
+  height: 100%;
+}
+aside .sidBar{
+  position: fixed;
+  width: 270px;
+  left: -270px;
+  color: #fff;
+  background-color: black;
+  height: 100%;
+  overflow: hidden;
+  transition: .5s;
+  padding: 20px;
+}
+aside .sidBar a{
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+.sideBarControl {
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  background-color: #fff;
+  width: 70px;
+  padding: 20px 5px;
+  transition: .5s;
+}
+.sideBarControl .closeIcon{
+  display: none;
+}
+.closeIcon,.openIcon:hover{
+  cursor: pointer;
+}
+.meals .image{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.meals .image .overlay{
+  background-color: #ffffffa8;
+  border-radius: 10px;
+  transition: .5s;
+  top: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.meals .image .overlay h3{
+  font-weight: 500;
+  font-size: 28px;
+}
+.meals .image:hover .overlay{
+  top: 0;
+}
+.meals .image img{
+  border-radius: 10px;
+}
+.details .close{
+  cursor: pointer;
+}
+.details .alldetails span{
+  font-size: 28px;
+  font-weight: 500;
+}
+.details .alldetails .Ingredient span,.details .alldetails .special{
+  background-color: #CFF4FC;
+  color: #0D5160;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  margin-block: 10px;
+  display: inline-block;
+}
+.details .alldetails .special{
+  background-color: #F8D7DA;
+  color: rgb(132, 32, 41);
+}
+.details .alldetails .source{
+  background-color: #1A7347;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.details .alldetails .youtube{
+  background-color: #BB2D3B;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.area,.ingredients{
+  cursor: pointer;
+}
+.area h3,.ingredients h3{
+  /* width: fit-content; */
+  text-align: center;
+  
+}
+.search{
+  display: none;
+}
+.search input{
+  background-color: transparent;
+  color: #fff;
+}
+.search input:focus{
+  background-color: transparent;
+  color: #fff;
+}
+.search input::placeholder {
+  color: #ffffffc6;
+}
+.contact{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.contact button{
+  background-color: transparent;
+  color: #BB2D3B;
+  border-color: #BB2D3B;
+}
+.contact .error{
+  color: #BB2D3B;
+}
+
+#registrationForm button:disabled{
+  background-color: transparent;
+  border-color: #BB2D3B;
+  color: #BB2D3B;
+}
+#registrationForm button{
+  background-color: #BB2D3B;
+  border-color: #BB2D3B;
+  color: #fff;
+}
