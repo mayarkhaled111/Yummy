@@ -26,7 +26,7 @@ let dataArray = [];
 //  display random meals when document is ready
 function displayMeals(data) {
   let box = "";
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < 20; i++) {
     if (data[i]) {
       box += `
         <div class="col-md-3" onclick="recipeDetailsApi('${data[i].idMeal}')">
@@ -87,7 +87,7 @@ async function getCategories() {
 // display meals by category
 function displayCat(data) {
   let box = "";
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < 20; i++) {
     if (data[i]) {
       box += `
               <div class="col-md-3" onclick="recipeDetailsApi('${data[i].idMeal}')">
@@ -120,7 +120,7 @@ async function filterCat(cat) {
 // display data(category) in meals section
 function display(data) {
   let box = "";
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < 20; i++) {
     if (data[i]) {
       box += `
                 <div class="col-md-3" onclick="filterCat('${
